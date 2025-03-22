@@ -4,8 +4,8 @@ import { AuthContext } from '../context/AuthContext';
 
 function Login({ darkMode }) {
   const [loginType, setLoginType] = useState('student');
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState('student');
+  const [password, setPassword] = useState('password');
   const { login } = useContext(AuthContext);
   const navigate = useNavigate();
 
@@ -22,6 +22,12 @@ function Login({ darkMode }) {
     }
   };
 
+  const handleLoginTypeChange = (type) => {
+    setLoginType(type);
+    setUsername(type);
+    setPassword('password');
+  };
+
   return (
     <div className={`flex flex-col items-center justify-center min-h-screen ${darkMode ? 'bg-gray-900 text-white' : 'bg-gray-100 text-gray-900'}`}>
       <div className={`w-full max-w-md ${darkMode ? 'bg-gray-800' : 'bg-white'} shadow-md rounded px-8 pt-6 pb-8 mb-4`}>
@@ -29,13 +35,13 @@ function Login({ darkMode }) {
         <div className="mb-4 flex justify-center">
           <button
             className={`mx-2 px-4 py-2 rounded-md ${loginType === 'student' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'}`}
-            onClick={() => setLoginType('student')}
+            onClick={() => handleLoginTypeChange('student')}
           >
             Student
           </button>
           <button
             className={`mx-2 px-4 py-2 rounded-md ${loginType === 'teacher' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'}`}
-            onClick={() => setLoginType('teacher')}
+            onClick={() => handleLoginTypeChange('teacher')}
           >
             Teacher
           </button>
@@ -49,9 +55,9 @@ function Login({ darkMode }) {
               className={`shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline ${darkMode ? 'bg-gray-700 text-white' : 'bg-white text-gray-700'}`}
               id="username"
               type="text"
-              placeholder="Username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
+              readOnly
             />
           </div>
           <div className="mb-6">
@@ -62,9 +68,9 @@ function Login({ darkMode }) {
               className={`shadow appearance-none border rounded w-full py-2 px-3 mb-3 leading-tight focus:outline-none focus:shadow-outline ${darkMode ? 'bg-gray-700 text-white' : 'bg-white text-gray-700'}`}
               id="password"
               type="password"
-              placeholder="********"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              readOnly
             />
           </div>
           <div className="flex items-center justify-between">
@@ -82,9 +88,9 @@ function Login({ darkMode }) {
       </p>
       <div className={`mt-4 p-4 ${darkMode ? 'bg-gray-800' : 'bg-gray-200'} rounded-md`}>
         <p className="text-sm">
-          <strong>For testing:</strong><br />
-          Student login: username "student", password "password"<br />
-          Teacher login: username "teacher", password "password"
+          <strong>Use credentials for login:</strong><br />
+          <b>username</b> : student<br />
+          <b>password</b> : password
         </p>
       </div>
     </div>
