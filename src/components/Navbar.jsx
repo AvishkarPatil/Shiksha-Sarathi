@@ -1,8 +1,8 @@
-import React, { useState, useContext } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { AuthContext } from '../context/AuthContext';
 import { Link, useNavigate } from "react-router-dom";
 import { Moon, Sun, Menu, X, LogIn, LogOut } from "lucide-react";
-import { AuthContext } from '../context/AuthContext';
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState, useContext } from "react";
 
 export default function Navbar({ darkMode, toggleDarkMode }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -44,8 +44,12 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
             className="flex items-center"
           >
             <Link to="/" className="text-2xl font-bold">
-              <span className="text-blue-600">Shiksha</span>
-              <span className={darkMode ? "text-white" : "text-gray-900"}>Sarathi</span>
+              <span className="text-blue-600 hidden sm:inline">Shiksha</span>
+              <span className={`${darkMode ? "text-white" : "text-gray-900"} hidden sm:inline`}>Sarathi</span>
+              <span className="sm:hidden">
+                <span className="text-blue-600">S</span>
+                <span className={darkMode ? "text-white" : "text-gray-900"}>S</span>
+              </span>
             </Link>
           </motion.div>
           <nav className="hidden md:flex space-x-1">
@@ -75,7 +79,7 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
             className="flex items-center space-x-4"
           >
             {user && (
-              <div className={`flex items-center justify-center w-20 h-10 rounded-lg ${
+              <div className={`hidden md:flex items-center justify-center w-20 h-10 rounded-lg ${
                 darkMode ? "bg-gray-700" : "bg-gray-200"
               }`}>
                 <span className="text-lg" role="img" aria-label="fire">🔥</span>
@@ -101,7 +105,8 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
                     : "bg-gray-200 text-gray-800 hover:bg-gray-300"
                 }`}
               >
-                <LogOut size={16} className="inline mr-1" /> Logout
+                <LogOut size={16} className="inline mr-1 sm:mr-0" />
+                <span className="hidden sm:inline ml-1">Logout</span>
               </button>
             ) : (
               <Link
@@ -112,7 +117,8 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
                     : "bg-blue-600 text-white hover:bg-blue-700"
                 }`}
               >
-                <LogIn size={16} className="mr-1" /> Login
+                <LogIn size={16} className="mr-1 sm:mr-0" />
+                <span className="hidden sm:inline ml-1">Login</span>
               </Link>
             )}
             <button
@@ -158,26 +164,6 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
                   <span className="text-lg mr-2" role="img" aria-label="fire">🔥</span>
                   <span className="text-sm font-bold">{streakCount} day streak</span>
                 </div>
-              )}
-              {user ? (
-                <button
-                  onClick={handleLogout}
-                  className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium ${
-                    darkMode
-                      ? "text-gray-300 hover:text-white hover:bg-gray-700"
-                      : "text-gray-700 hover:text-gray-900 hover:bg-gray-100"
-                  }`}
-                >
-                  <LogOut size={20} className="inline mr-1" /> Logout
-                </button>
-              ) : (
-                <Link
-                  to="/login"
-                  className="block px-3 py-2 rounded-md text-base font-medium text-white bg-blue-600 hover:bg-blue-700"
-                  onClick={toggleMenu}
-                >
-                  <LogIn size={20} className="inline mr-1" /> Login
-                </Link>
               )}
             </div>
           </motion.div>
