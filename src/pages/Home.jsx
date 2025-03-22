@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { QrCode, Book, Trophy, ChevronRight } from 'lucide-react';
 import '../styles/Home.css';
+import Footer from './components/Footer';
 
 const heroData = {
   quotes: [
@@ -174,6 +175,7 @@ function Home({ darkMode }) {
           </Link>
         </div>
       </section>
+      <Footer darkMode={darkMode} />
     </div>
   );
 }
