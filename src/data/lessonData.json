@@ -1,0 +1,200 @@
+{
+  "lesson1": {
+    "id": "lesson1",
+    "title": "Introduction to Artificial Intelligence",
+    "subjects": ["AI-ML", "Computer"],
+    "subjectId": "computer-science",
+    "class": "10th",
+    "date": "2023-06-15",
+    "lotdNumber": 1,
+    "videoUrl": "https://www.youtube.com/embed/JMUxmLyrhSk",
+    "keyPoints": [
+      "What is Artificial Intelligence?",
+      "Basic concepts of Machine Learning",
+      "Applications of AI in daily life",
+      "Future of AI technology"
+    ],
+    "quiz": [
+      {
+        "question": "What does AI stand for?",
+        "options": ["Artificial Intelligence", "Automated Information", "Advanced Integration", "Algorithmic Iteration"],
+        "correctAnswer": 0
+      },
+      {
+        "question": "Which of the following is NOT an application of AI?",
+        "options": ["Self-driving cars", "Voice assistants", "Traditional calculators", "Facial recognition"],
+        "correctAnswer": 2
+      },
+      {
+        "question": "What is a key component of Machine Learning?",
+        "options": ["Data", "Human intervention", "Mechanical parts", "Physical sensors"],
+        "correctAnswer": 0
+      },
+      {
+        "question": "Which field does NOT typically use AI?",
+        "options": ["Healthcare", "Finance", "Education", "Manual labor"],
+        "correctAnswer": 3
+      },
+      {
+        "question": "What is a potential concern about AI?",
+        "options": ["Job displacement", "Increased productivity", "Improved decision making", "Enhanced communication"],
+        "correctAnswer": 0
+      }
+    ]
+  },
+  "lesson2": {
+    "id": "lesson2",
+    "title": "Introduction to Programming",
+    "subjects": ["Computer", "Programming"],
+    "subjectId": "computer-science",
+    "class": "10th",
+    "date": "2023-06-16",
+    "lotdNumber": 2,
+    "videoUrl": "https://www.youtube.com/embed/zOjov-2OZ0E",
+    "keyPoints": [
+      "What is Programming?",
+      "Basic programming concepts",
+      "Introduction to algorithms",
+      "Popular programming languages"
+    ],
+    "quiz": [
+      {
+        "question": "What is the primary function of programming in software development?",
+        "options": ["To design computer hardware", "To create software applications and operating systems", "To manage network systems", "To develop database systems"],
+        "correctAnswer": 1
+      },
+{
+        "question": "Which of the following is NOT a basic programming concept?",
+        "options": ["Variables", "Data Types", "Algorithms", "Control Structures"],
+        "correctAnswer": 2
+      },
+{
+        "question": "What is an algorithm in programming?",
+        "options": ["A set of rules for writing code", "A type of programming language", "A set of instructions for solving a problem", "A method for debugging code"],
+        "correctAnswer": 2
+      },
+{
+        "question": "Which programming language is known for its role in client-side scripting on the web?",
+        "options": ["JavaScript", "Python", "Java", "C++"],
+        "correctAnswer": 0
+      },
+{
+        "question": "What is the primary consideration when evaluating the efficiency of an algorithm?",
+        "options": ["Readability", "Correctness", "Complexity", "Scalability"],
+        "correctAnswer": 2
+      }
+    ]
+  },
+  "lesson3": {
+    "id": "lesson3",
+    "title": "Data Structures and Algorithms",
+    "subjects": ["Computer Science", "Programming"],
+    "subjectId": "computer-science",
+    "class": "11th",
+    "date": "2023-06-17",
+    "lotdNumber": 3,
+    "videoUrl": "https://www.youtube.com/embed/8hly31xKli0",
+    "keyPoints": [
+      "What are data structures?",
+      "Common data structures: arrays, linked lists, trees",
+      "Introduction to algorithms",
+      "Time and space complexity"
+    ],
+    "quiz": [
+      {
+        "question": "What is an algorithm?",
+        "options": ["A type of computer", "A programming language", "A step-by-step procedure for solving a problem", "A data structure"],
+        "correctAnswer": 2
+      },
+      {
+        "question": "Which of the following is NOT a data structure?",
+        "options": ["Array", "Queue", "Tree", "Python"],
+        "correctAnswer": 3
+      }
+    ]
+  },
+  "lesson4": {
+    "id": "lesson4",
+    "title": "Introduction to Physics",
+    "subjects": ["Physics", "Science"],
+    "subjectId": "physics",
+    "class": "8th",
+    "date": "2023-06-18",
+    "lotdNumber": 4,
+    "videoUrl": "https://www.youtube.com/embed/ZM8ECpBuQYE",
+    "keyPoints": [
+      "What is Physics?",
+      "Basic concepts of motion",
+      "Introduction to forces",
+      "Energy and its forms"
+    ],
+    "quiz": [
+      {
+        "question": "What is the SI unit of force?",
+        "options": ["Watt", "Joule", "Newton", "Pascal"],
+        "correctAnswer": 2
+      },
+      {
+        "question": "Which of the following is NOT a form of energy?",
+        "options": ["Kinetic", "Potential", "Thermal", "Velocity"],
+        "correctAnswer": 3
+      }
+    ]
+  },
+  "lesson5": {
+    "id": "lesson5",
+    "title": "Introduction to Algebra",
+    "subjects": ["Mathematics", "Algebra"],
+    "subjectId": "mathematics",
+    "class": "10th",
+    "date": "2023-06-19",
+    "lotdNumber": 5,
+    "videoUrl": "https://www.youtube.com/embed/NybHckSEQBI",
+    "keyPoints": [
+      "What is Algebra?",
+      "Variables and constants",
+      "Basic algebraic operations",
+      "Solving simple equations"
+    ],
+    "quiz": [
+      {
+        "question": "What does the term 'variable' mean in algebra?",
+        "options": ["A number that changes", "A letter representing an unknown value", "A mathematical operation", "A type of equation"],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Which of the following is NOT an algebraic operation?",
+        "options": ["Addition", "Subtraction", "Multiplication", "Differentiation"],
+        "correctAnswer": 3
+      }
+    ]
+  },
+  "lesson6": {
+    "id": "lesson6",
+    "title": "Introduction to World History",
+    "subjects": ["History", "Social Studies"],
+    "subjectId": "history",
+    "class": "9th",
+    "date": "2023-06-20",
+    "lotdNumber": 6,
+    "videoUrl": "https://www.youtube.com/embed/Yocja_N5s1I",
+    "keyPoints": [
+      "What is World History?",
+      "Major civilizations and empires",
+      "Key historical events",
+      "Impact of history on the present"
+    ],
+    "quiz": [
+      {
+        "question": "Which of the following is considered one of the earliest civilizations?",
+        "options": ["Roman Empire", "Mesopotamia", "United States", "Australia"],
+        "correctAnswer": 1
+      },
+      {
+        "question": "What event marked the beginning of World War I?",
+        "options": ["The assassination of Archduke Franz Ferdinand", "The bombing of Pearl Harbor", "The fall of the Berlin Wall", "The signing of the Treaty of Versailles"],
+        "correctAnswer": 0
+      }
+    ]
+  }
+}

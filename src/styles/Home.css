@@ -1,0 +1,269 @@
+.home-container {
+  min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.home-container.dark {
+  background-color: #1a202c;
+  color: #ffffff;
+}
+
+.hero-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 0.5rem;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #ffffff;
+  padding: 1rem;
+  text-align: center;
+}
+
+.hero-quote {
+  max-width: 48rem;
+  margin-bottom: 2rem;
+  transition: opacity 0.5s;
+}
+
+.hero-title {
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  max-width: 42rem;
+}
+
+.cta-button,
+.btn-primary {
+  background-color: #3182ce;
+  color: #ffffff;
+  font-size: 1.125rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+  display: inline-flex;
+  align-items: center;
+}
+
+.cta-button:hover,
+.btn-primary:hover {
+  background-color: #2c5282;
+  transform: translateY(-2px);
+}
+
+.section {
+  padding: 2rem 0; /* Reduce padding top and bottom */
+  margin-bottom: 1rem; /* Add a small margin between sections */
+  border-radius: 15px;
+}
+
+.section-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.section-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.card {
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: background-color 0.3s, transform 0.3s;
+   margin-bottom: 1rem;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.feature-item {
+  text-align: center;
+}
+
+.feature-icon {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 1rem;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.testimonial-card {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+}
+
+.home-container.dark .section {
+  background-color: #2d3748;
+}
+
+.home-container.dark .card,
+.home-container.dark .testimonial-card {
+  background-color: #4a5568;
+  color: #ffffff;
+}
+
+.home-container.dark .section-title {
+  color: #ffffff;
+}
+
+.home-container.dark .feature-item p,
+.home-container.dark .testimonial-card p {
+  color: #e2e8f0;
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .hero-content {
+    padding: 1rem 2rem;
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .testimonial-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-title {
+    font-size: 3.75rem;
+  }
+
+  .section-content {
+    padding: 0 2rem;
+  }
+}
+
+/* Additional styles for better dark mode and hover effects */
+.home-container.dark .cta-button:hover,
+.home-container.dark .btn-primary:hover {
+  background-color: #4299e1;
+}
+
+.home-container.dark .feature-icon {
+  color: #63b3ed;
+}
+
+.home-container.dark .card:hover,
+.home-container.dark .testimonial-card:hover {
+  background-color: #2d3748;
+}
+
+/* Smooth transition for dark mode */
+.home-container,
+.home-container *,
+.home-container *:before,
+.home-container *:after {
+  transition: all 0.3s ease-in-out;
+}
+
+.home-container.dark {
+  background-color: #1a202c;
+  color: #e2e8f0;
+}
+
+.dark .section {
+  background-color: #2d3748;
+}
+
+.dark .section-title {
+  color: #e2e8f0;
+}
+
+.dark .card {
+  background-color: #4a5568;
+  color: #e2e8f0;
+}
+
+.dark .feature-item {
+  background-color: #4a5568;
+}
+
+.dark .testimonial-card {
+  background-color: #4a5568;
+}
+
+.dark .btn-primary {
+  background-color: #4299e1;
+  color: #e2e8f0;
+}
+
+.dark .btn-primary:hover {
+  background-color: #3182ce;
+}
+
+/* Ensure text is visible in dark mode */
+.dark h1, .dark h2, .dark h3, .dark p {
+  color: #e2e8f0;
+}
+
+/* Adjust icon colors in dark mode */
+.dark .feature-icon {
+  color: #63b3ed;
+}
+
+/* Ensure links are visible in dark mode */
+.dark a {
+  color: #63b3ed;
+}
+
+.dark a:hover {
+  color: #4299e1;
+}
